@@ -613,14 +613,21 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--accent-color);
   cursor: pointer;
-  background-image: url(../images/close-btn.svg);
+  
   background-repeat: no-repeat;
   background-position: center;
+  transition: fill 250ms var(--cubic);
 }
 
-/* .btn-modal:hover {
-  background: var(--hover-color);
-} */
+.btn-modal:hover {
+  fill: var(--hover-color);
+}
+.btn-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
+}
 
 /* Form */
 
@@ -629,6 +636,7 @@ img {
   margin: 0 auto;
 }
 .form-field {
+  position: relative;
   margin-bottom: 28px;
   display: flex;
   flex-direction: column;
@@ -666,11 +674,31 @@ textarea {
   border-radius: 4px;
   padding: 16px 12px;
 }
+.form-input {
+  transition: border-color 250ms var(--cubic),
+  fill 250ms var(--cubic);
+}
+
+.form-input:focus,
+.form-input:focus ~ .form-icon {
+  border-color: var(--hover-color);
+  fill: var(--hover-color);
+  outline: none;
+}
+
+.form-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  display: inline-block;
+}
+
 .btn-submit {
   display: flex;
   margin: 30px auto 40px auto;
 }
 
+/* footer form */
 .footer-input {
   width: 360px;
   padding: 15px 0 15px 16px;
@@ -706,4 +734,12 @@ textarea {
   display: flex;
   flex-direction: column;
   margin-right: 12px;
+}
+.icon-send {
+  fill: var(--accent-color);
+}
+.btn-subscribe {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 28px;
 }
