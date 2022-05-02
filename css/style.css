@@ -273,14 +273,12 @@ address {
 .team-name {
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.9;
   text-align: center;
   color: var(--primary-text-color);
   margin-bottom: 10px;
 }
 .speciality {
   font-size: 16px;
-  line-height: 1.9;
   text-align: center;
   color: var(--title-text-color);
 }
@@ -431,7 +429,7 @@ img {
 .footer-nav {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
+ 
 }
 
 .socials-links {
@@ -640,7 +638,7 @@ img {
 }
 .form-field {
   position: relative;
-  margin-bottom: 28px;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
 }
@@ -741,7 +739,6 @@ textarea::placeholder {
 .form-footer {
   display: flex;
   align-items: flex-end;
-  margin-left: auto;
 }
 .footer-field {
   display: flex;
@@ -756,6 +753,11 @@ textarea::placeholder {
   justify-content: space-between;
   padding: 0px 28px;
 }
+.form-subscribe {
+    margin-left: auto;
+}
+
+
 /* checkbox */
 .checkbox {
   position: absolute;
@@ -778,7 +780,7 @@ textarea::placeholder {
 }
 .checkbox-label {
   display: flex;
-  /* align-items: center; */
+  justify-content: center;
 }
 
 .checkbox:checked + .checkbox-icon {
